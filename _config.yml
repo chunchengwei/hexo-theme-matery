@@ -201,7 +201,7 @@ verifyPassword:
 # Add google analytics configuration
 # 添加 Google Analytics 配置
 googleAnalytics:
-  enable: false
+  enable: true
   id: UA-112504491-1
 
 # The post featured images that needs to be displayed when there is no image.
