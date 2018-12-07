@@ -20,8 +20,8 @@ menu:
 # index page dream text,
 # 配置首页显示"梦想"的语句.
 dream:
-  enable: false
-  text: The best preparation for tomorrow is doing your best today.
+  enable: true
+  text: 现在闭上眼睛，你能看见什么？
 
 # Whether to display the title of the recommended posts
 # 是否显示推荐文章的标题
@@ -122,7 +122,7 @@ mySkills:
 # If you don't want to display this `Gallery` content, you can deactivate or delete this configuration.
 # 在“关于”页面配置"我的相册"图片，如果你不需要这些信息则可以将其设置为不激活或者将其删除.
 myGallery:
-  enable: true
+  enable: false
   data:
     - /medias/featureimages/0.jpg
     - /medias/featureimages/1.jpg
@@ -183,7 +183,7 @@ valine:
 # Whether to display fork me on github icon and link, default true, You can change it to your repo address
 # 配置是否在 header 中显示 fork me on github 的图标，默认为true，你可以修改为你的仓库地址.
 githubLink:
-  enable: true
+  enable: false
   url: https://github.com/chunchengwei/chunchengwei.github.io
   title: Fork Me
 
