@@ -164,6 +164,11 @@ mark {
     border-radius: 5px 5px 0 0;
 }
 
+.card .card-title {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
 .container .row {
     margin-bottom: 0;
 }
@@ -684,7 +689,7 @@ article .card {
 }
 
 article .card-image img {
-    height: 220px;
+    height: 175px;
     border-radius: 0.3rem;
 }
 
@@ -780,6 +785,11 @@ article .article-tags .chip {
 
 .paging .disabled i {
     color: #999 !important;
+}
+
+.summary {
+    height: 46px;
+    overflow: hidden;
 }
 
 /*文章详情样式*/
@@ -1189,6 +1199,25 @@ table tr:nth-child(2n), thead {
         -moz-animation: cd-bounce-1 0.6s;
         animation: cd-bounce-1 0.6s;
     }
+}
+
+.cd-timeline-content .card a.card-title-bar {
+    text-decoration: none;
+}
+
+.cd-timeline-content .card .card-title {
+    font-family: Times, "Times New Roman", serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 22px;
+    color: #fff;
+
+    border-radius: 5px;
+    padding: 15px 15px 12px 18px;
+
+    background-image: url(/medias/backgroundimages/brick-wall.png);
+    background-color: #00256e;
 }
 
 .cd-timeline-content {
