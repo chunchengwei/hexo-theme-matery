@@ -203,7 +203,6 @@ google_analytics:
   enable: true
   ID: UA-112504491-1
 
-
 # The post featured images that needs to be displayed when there is no image.
 # 无文章特色图片时需要显示的文章特色图片.
 featureImages:
