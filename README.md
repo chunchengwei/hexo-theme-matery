@@ -23,7 +23,7 @@
 - Can be set append the copyright information when copying the content of the post
 - Can be set to do password verification when reading a post
 - Comment module of [Gitalk](https://gitalk.github.io/), [Gitment](https://imsun.github.io/gitment/), [Valine](https://valine.js.org/) and [Disqus](https://disqus.com/).(Gitalk is recommended)
-- Integrated Google Analytics
+- Integrated [Busuanzi Statistics](http://busuanzi.ibruce.info/) And `Google Analytics`
 
 ## Next development plans
 
@@ -253,6 +253,10 @@ feed:
 
 Execute `hexo clean && hexo g` to regenerate the blog file, and then you can see the `atom.xml` file in the `public` folder, indicating that you have successfully installed.
 
+### Modify website footer
+
+Website footer may need to be customized, and it is not convenient to make configuration information, So need to modify and process it by yourself. The changes are in the `/layout/_partial/footer.ejs` file, including the site, the theme used, the amount of traffic, and so on.
+
 ### Modify social links
 
 In the `/layout/_partial/social-link.ejs` file of the theme, you can modify or add the social link address you need. To add a link, please refer to the following code:
@@ -338,7 +342,7 @@ You can modify some custom modification in `_config.yml` as follows:
 - My Skills
 - My Gallery
 - Gitalk, Gitment, Valine and Disqus
-- Google Analytics
+- [Busuanzi Statistics](http://busuanzi.ibruce.info/) And Google Analytics
 - The map of default featured pictures. The theme will take remainde according to `hashcode` of post title if the post dose not set featured piactures.
 
 **I think everyone should have their own style and feature of blog**。if you are not satisfiled with functions and theme color,you can modify by yourself,and more free functions and deatil need to be modified by modify source code when it is hard to be finished in `_config.yml`.

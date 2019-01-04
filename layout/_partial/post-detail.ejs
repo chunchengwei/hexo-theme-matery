@@ -14,6 +14,7 @@
             <div class="post-info">
                 <% if (page.categories && page.categories.length > 0) { %>
                 <span class="post-cate">
+                <!--<span class="post-cate" style="margin-right: 0px">-->
                     <i class="fa fa-bookmark fa-fw icon-category"></i>
                     <% page.categories.forEach(category => { %>
                     <a href="<%- url_for(category.path) %>" class="post-category" target="_blank">
@@ -26,6 +27,11 @@
                 <span class="post-date">
                     <i class="fa fa-calendar fa-fw"></i><%- date(page.date, 'YYYY-MM-DD') %>
                 </span>
+				
+				<% if (theme.busuanziStatistics && theme.busuanziStatistics.enable) { %>
+                    <span id="busuanzi_container_page_pv" class="post-read">
+                    <i class="fa fa-eye fa-fw"></i><%= __('read') %> <span id="busuanzi_value_page_pv"></span>
+				<% } %>
             </div>
         </div>
         <hr>
