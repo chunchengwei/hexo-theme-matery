@@ -23,32 +23,7 @@
 - 可设置复制文章内容时追加版权信息
 - 可设置阅读文章时做密码验证
 - [Gitalk](https://gitalk.github.io/)、[Gitment](https://imsun.github.io/gitment/)、[Valine](https://valine.js.org/)和[Disqus](https://disqus.com/)评论模块（推荐使用`Gitalk`）
-- 集成了[不蒜子统计](http://busuanzi.ibruce.info/)和谷歌分析(`Google Analytics`)
-
-## 后续开发计划
-
-- [x] 重构标签页为**可分页**
-- [x] 重构归档页为**可分页**
-- [x] 增加分类页
-- [x] 增加关于我页面
-- [x] 阅读文章验证密码
-- [x] 集成[Gitalk](https://gitalk.github.io/)
-- [x] 右上角实现`fork me on github`
-- [x] 添加`RSS`
-- [x] 添加文章`TOC`
-- ~~网站底部加上访问量等统计功能~~（主题使用者可以基于谷歌分析、百度统计、LeanCloud等来实现）
-- [x] 首页设计和添加置顶文章
-- [x] 文章结束后增加**打赏**功能
-- ~~为博客添加萌萌的**宠物**或者**成长树**等~~（可以使用[hexo-helper-live2d](https://github.com/EYHN/hexo-helper-live2d)插件来实现）
-- [x] 集成[Valine](https://valine.js.org/)
-- [x] 增加阅读文章验证密码的功能
-- [x] 增加了对`MathJax`的支持
-- [ ] 制作一个LOGO
-- [x] 增加友情链接页面
-- [x] 添加复制文章内容时追加博客版权信息
-- [x] 添加点击页面的'爱心'效果
-
-> 欢迎贡献!
+- 集成了[不蒜子统计](http://busuanzi.ibruce.info/)、谷歌分析(`Google Analytics`)和文章字数统计等功能
 
 ## 下载
 
@@ -229,6 +204,26 @@ permalink_pinyin:
 
 > **注**：除了此插件外，[hexo-abbrlink](https://github.com/rozbo/hexo-abbrlink)插件也可以生成非中文的链接。
 
+### 文章字数统计插件（可选的）
+
+如果你想要在文章中显示文章字数、阅读时长信息，可以安装[hexo-wordcount](https://github.com/willin/hexo-wordcount)插件。
+
+安装命令如下：
+
+```bash
+npm i --save hexo-wordcount
+```
+
+然后只需在本主题下的`_config.yml`文件中，激活以下配置项即可：
+
+```yaml
+wordCount:
+  enable: false # 将这个值设置为true即可.
+  postWordCount: true
+  min2read: true
+  totalCount: true
+```
+
 ### 添加RSS订阅支持（可选的）
 
 本主题中还使用到了[hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed)的 Hexo 插件来做`RSS`，安装命令如下：
@@ -288,19 +283,22 @@ feed:
 
 ## 文章Front-matter示例
 
-以下为文章`Front-matter`的示例，所有内容均为**非必填**的。但是，仍然建议至少填写`title`的值，当然最好都填写上这些文章信息。
+以下为文章`Front-matter`的示例和说明，所有内容均为**非必填**的。但我仍然建议至少填写`title`和`date`的值。
 
 ```yaml
 ---
 title: typora-vue-theme主题介绍
 date: 2018-09-07 09:25:00
 author: 赵奇
-img: /source/images/xxx.jpg # 或者:http://xxx.com/xxx.jpg
-top: true # 如果top值为true，则会是首页推荐文章
+ # 图片推荐使用图床(腾讯云、七牛云、又拍云等)来做图片的路径.如:http://xxx.com/xxx.jpg
+img: /source/images/xxx.jpg
+# 如果top值为true，则会是首页推荐文章
+top: true
 # 如果要对文章设置阅读验证密码的话，就可以在设置password的值，该值必须是用SHA256加密后的密码，防止被他人识破
 password: 8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92
 # 本文章是否开启mathjax，且需要在主题的_config.yml文件中也需要开启才行
 mathjax: false
+summary: 这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要
 categories: Markdown
 tags:
   - Typora
@@ -338,6 +336,7 @@ tags:
 - 文章打赏信息
 - 复制文章内容时追加版权信息
 - MathJax
+- 文章字数统计、阅读时长
 - 点击页面的'爱心'效果
 - 我的项目
 - 我的技能
